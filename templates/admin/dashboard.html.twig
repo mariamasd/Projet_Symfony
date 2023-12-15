@@ -1,0 +1,93 @@
+{# templates/admin/my-custom-page.html.twig #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}Bienvenue dans la page admin
+{% endblock %}
+{% block page_actions %}
+	<div class="card-body">
+		<h5 class="card-title">Analyse</h5>
+		<a href="{{path('app_analyses')}}" class="btn btn-primary">
+			<i class="bi bi-plus-circle"></i>Ajouter une Analyse</a>
+	</div>
+	<div class="card-body">
+		<h5 class="card-title">rendez vous</h5>
+		<a href="{{path('app_user')}}" class="btn btn-primary">
+			<i class="bi bi-plus-circle"></i>Voir les RV</a>
+	</div>
+{% endblock %}
+
+{% block main %}
+	<div class="card-body">
+		<h5 class="card-title">Creneau</h5>
+		<a href="{{path('app_creneau')}}" class="btn btn-primary">
+			<i class="bi bi-plus-circle"></i>Ajouter un creneau</a>
+	</div>
+	<h1>Liste des creneaux</h1>
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Identifiant</th>
+					{# <th scope="col">Patient</th> #}
+					<th scope="col">date Analyse</th>
+					<th scope="col">heure
+					</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td class="p-2">1</td>
+					<td class="p-2">2023-08-14</td>
+					<td class="p-2">12 : 00
+					</td>
+					<td class="p-2">
+						<a href="" class="btn btn-info btn-sm">
+							<i class="bi bi-eye"></i>
+						</a>
+						<a href="{{ path('edit_action', { 'id':'1' }) }}" class="btn btn-warning btn-sm">
+							<i class="bi bi-pencil-fill"></i>
+						</a>
+						<a href="{{ path('delete_action', { 'id':'1' }) }}" class="btn btn-danger btn-sm">
+							<i class="bi bi-trash3"></i>
+						</a>
+					</td>
+				</tr>
+				{# {% endfor %}
+														{% else %}
+															<tr>
+																<td colspan="6">No data available.55</td>
+															</tr>
+														{% endif %} #}
+
+			{# 
+															{% if creneaux  is defined %}
+																{% for key, item in donnees %}
+																	<tr>
+																		<td class="p-2">{{ item.id }}</td>
+																		{# <td class="p-2">{{ item.patient }}</td> #}
+				{# <td class="p-2">{{ item.date|date('Y-m-d') }}</td>
+																					<td class="p-2">{{ item.date|date('H:i') }}</td>
+																					<td class="p-2">
+																						<a href="" class="btn btn-info btn-sm">
+																							<i class="bi bi-eye"></i>
+																						</a>
+																						<a href="{{ path('edit_action', { 'id': item.id }) }}" class="btn btn-warning btn-sm">
+																							<i class="bi bi-pencil-fill"></i>
+																						</a>
+																						<a href="{{ path('delete_action', { 'id': item.id }) }}" class="btn btn-danger btn-sm">
+																							<i class="bi bi-trash3"></i>
+																						</a>
+																					</td>
+																				</tr>
+																			{% endfor %}
+																		{% else %}
+																			<tr>
+																				<td colspan="6">No data available.55</td>
+																			</tr>
+																		{% endif %} #}
+			</tbody>
+		</table>
+	</div>
+</div>{% endblock %}
