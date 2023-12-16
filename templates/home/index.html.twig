@@ -8,8 +8,8 @@
 		.currentHover:hover {
 			opacity: 1;
 		}
-		img:hover {
-			opacity: 1
+		img{
+			opacity: 1;
 		}
 	</style>
 	<nav id="nav-1" class="navbar navbar-expand-lg bg-color fixed-top" style="background-color: #007bff;">
@@ -36,30 +36,28 @@
 						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'services' ? 'active' : '' }}" href="#3" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Services</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'contact' ? 'active' : '' }}" href="#4" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Contact</a>
+						<a class="nav-link text-uppercase " href="{{path('app_contact')}}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Contact</a>
 					</li>
 					{# <li class="nav-item">
-																										<a class="nav-link text-uppercase " href="{{path('app_contact')}}" style="color: white; margin-right:1em; font-size: 0.8em; margin-left:1em;">Contact</a>
-																									</li> #}
+						<a class="nav-link text-uppercase " href="{{path('app_contact')}}" style="color: white; margin-right:1em; font-size: 0.8em; margin-left:1em;">Contact</a></li> #}
 					{# {% if app.user %}
-																																				<li class="nav-item">
-																																					<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('app_logout') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Déconnexion</a>
-																																				</li>
-																																				{% if app.user %}
-																																					{% if is_granted('ROLE_SECRETAIRE') %}
-																																						<li class="nav-item">
-																																							<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('secretaire') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
-																																						</li>
-																																					{% elseif is_granted('ROLE_PATIENT') %}
-																																						<li class="nav-item">
-																																							<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('admin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
-																																						</li>
-																																					{% elseif is_granted('ROLE_LABORANTIN') %}
-																																						<li class="nav-item">
-																																							<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('laborantin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
-																																						</li>
-																																					{% endif %}
-																																				{% endif %}
+							<li class="nav-item">
+								<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('app_logout') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Déconnexion</a></li>
+																			{% if app.user %}
+																				{% if is_granted('ROLE_SECRETAIRE') %}
+																		            <li class="nav-item">
+																						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('secretaire') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																							</li>
+																									{% elseif is_granted('ROLE_PATIENT') %}
+																										<li class="nav-item">
+																											<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('admin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																												</li>
+																											{% elseif is_granted('ROLE_LABORANTIN') %}
+																												<li class="nav-item">
+																												<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('laborantin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																													</li>
+																											{% endif %}
+																											{% endif %}
 																														
 																																			{% else %}
 																																				<li class="nav-item">
@@ -78,7 +76,7 @@
 		<section id="1">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-12" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.1)), url('{{ asset('images/imageA.png') }}') no-repeat center/cover; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+					<div class="col-12" style="background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.1)), url('{{ asset('images/imageA.png') }}') no-repeat center/cover; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;opacity:1">
 						<div style="text-align: center; color: white;">
 							<h1 style="font-size: 3em; color: #007bff;">SOINS MÉDICAUX SANS RDV</h1>
 							<h3 style="font-size: 1.5em; color: #0056b3;">POUR ADULTES ET ENFANTS</h3>
