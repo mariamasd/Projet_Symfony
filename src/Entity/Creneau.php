@@ -17,7 +17,7 @@ class Creneau
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
-    #[ORM\ManyToOne(inversedBy: 'creneaus')]
+    #[ORM\ManyToOne(inversedBy: 'creneau')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Secretaire $secretaire = null;
 

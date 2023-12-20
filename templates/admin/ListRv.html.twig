@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block container %}
+
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<style>
+				body {
+					margin: 0;
+					font-family: Arial, sans-serif;
+					background-color: #f0f8ff; /* Light Blue background color */
+				}
+
+				h2 {
+					text-align: center;
+					color: #000080; /* Navy Blue text color */
+					padding: 20px 0;
+				}
+
+				.table-container {
+					width: 80%;
+					margin: 0 auto; /* Center the table */
+					overflow-x: auto;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+					background-color: #add8e6; /* Light Blue background color for the table */
+				}
+
+				table {
+					width: 100%;
+					border-collapse: collapse;
+					margin-top: 20px;
+				}
+
+				th,
+				td {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+				}
+
+				th {
+					background-color: #000080; /* Navy Blue header background color */
+					color: #ffffff; /* White text color for the header */
+				}
+			</style>
+		</head>
+		<body>
+
+			<h2>Liste des Rendez-vous</h2>
+
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">Identifiant</th>
+							{# <th scope="col">Patient</th> #}
+							<th scope="col">Motif</th>
+							<th scope="col">Analyse</th>
+							<th scope="col">Date du rendezVous</th>
+							<th scope="col">Heure</th>
+							<th scope="col">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% if donnees is defined %}
+							{% for key, item in donnees %}
+								<tr>
+									<td class="p-2">{{ item.id }}</td>
+									{# <td class="p-2">{{ item.patient }}</td> #}
+									<td class="p-2">{{ item.motif }}</td>
+									<td class="p-2">{{ item.analyses }}</td>
+									<td class="p-2">{{ item.creneau.date|date('Y-m-d') }}</td>
+									<td class="p-2">{{ item.creneau.date|date('H:i') }}</td>
+									<td class="p-2">
+										<a href="" class="btn btn-info btn-sm">
+											<i class="bi bi-eye"></i>
+										</a>
+										<a href="{{ path('edit_action', { 'id': item.id }) }}" class="btn btn-warning btn-sm">
+											<i class="bi bi-pencil-fill"></i>
+										</a>
+										<a href="{{ path('delete_action', { 'id': item.id }) }}" class="btn btn-danger btn-sm">
+											<i class="bi bi-trash3"></i>
+										</a>
+									</td>
+								</tr>
+							{% endfor %}
+						{% else %}
+							<tr>
+								<td colspan="6">No data available.</td>
+							</tr>
+						{% endif %}
+					</tbody>
+				</table>
+			</div>
+
+		</body>
+	</html>
+
+{% endblock %}
