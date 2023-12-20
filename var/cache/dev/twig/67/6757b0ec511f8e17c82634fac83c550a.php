@@ -256,6 +256,6 @@ class __TwigTemplate_ce567dc203ed00f0312cfafa035d9910 extends Template
     
         </section>
     {% endblock %}
-    ", "analyses/index.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\templates\\analyses\\index.html.twig");
+    ", "analyses/index.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\templates\\analyses\\index.html.twig");
     }
 }

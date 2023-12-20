@@ -493,6 +493,6 @@ class __TwigTemplate_f0ffa97f3b3c44ce1ba9a04dba433418 extends Template
 <section
 \tid=\"4\" style=\" background-color: #007bff; color: white; margin-top: 5vh;\"><!-- Footer content goes here -->
 </section>{% endblock %}
-", "registration/register.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\templates\\registration\\register.html.twig");
     }
 }

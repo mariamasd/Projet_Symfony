@@ -136,7 +136,9 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
 \t\t\t\t\t\t<a class=\"nav-link text-uppercase ";
         // line 39
         echo (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "request", [], "any", false, false, false, 39), "get", ["_route"], "method", false, false, false, 39) == "contact")) ? ("active") : (""));
-        echo "\" href=\"#4\" style=\"color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;\">Contact</a>
+        echo "\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "\" style=\"color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;\">Contact</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t";
         // line 44
@@ -295,57 +297,57 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
 
 \t<section id=\"4\" style=\"background-color: #007bff; color: white; margin-top: 5vh;\">
 \t\t<div>
-\t\t\t<!-- FOOTER -->
+\t\t\t
 \t\t\t<footer class=\"w-100 py-4 flex-shrink-0\">
 \t\t\t\t<div class=\"container py-4\">
 \t\t\t\t\t<div class=\"row gy-4 gx-5\">
 \t\t\t\t\t\t<div class=\"col-lg-4 col-md-6\">
-\t\t\t\t\t\t\t<h5 class=\"h1\">Labo.</h5>
-\t\t\t\t\t\t\t<p class=\"small\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+\t\t\t\t\t\t\t<h5 class=\"h4\">LABORATOIRE MÉDICALE
+                             </h5>
+                               <p class=\"small\">Nos équipes de biologistes, techniciens préleveurs et secrétaires médicales sont présents pour vous accompagner tout au long de votre parcours de soins.</p>
+
 \t\t\t\t\t\t\t<p class=\"small mb-0\">&copy; Copyrights. All rights reserved.
-\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Bootstrapious.com</a>
+\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">CDA </a>
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-2 col-md-6\">
 \t\t\t\t\t\t\t<h5 class=\"mb-3\">Quick links</h5>
 \t\t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Home</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"";
+        // line 227
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">Home</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">About</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Get started</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"";
+        // line 233
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "\">Contact</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">FAQ</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"";
+        // line 236
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">FAQ</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-2 col-md-6\">
-\t\t\t\t\t\t\t<h5 class=\"mb-3\">Quick links</h5>
-\t\t\t\t\t\t\t<ul class=\"list-unstyled\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Home</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">About</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Get started</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">FAQ</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t<h5 class=\"mb-3\">RECRUTEMENT
+                               </h5>
+\t\t\t\t\t\t\t   <h6>Rejoignez-nous</h6>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t\t\t<h5 class=\"mb-3\">Newsletter</h5>
-\t\t\t\t\t\t\t<p class=\"small\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+\t\t\t\t\t\t\t<p class=\"small\">Abounnez à nous Newsletter</p>
 \t\t\t\t\t\t\t<form action=\"#\">
 \t\t\t\t\t\t\t\t<div class=\"input-group mb-3\">
-\t\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" placeholder=\"Recipient's username\" aria-label=\"Recipient's username\" aria-describedby=\"button-addon2\">
+\t\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" placeholder=\"votre email\" aria-label=\"Recipient's username\" aria-describedby=\"button-addon2\">
 \t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" id=\"button-addon2\" type=\"button\">
 \t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-paper-plane\"></i>
 \t\t\t\t\t\t\t\t\t</button>
@@ -389,7 +391,7 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
      */
     public function getDebugInfo()
     {
-        return array (  284 => 197,  273 => 189,  262 => 181,  167 => 89,  156 => 81,  145 => 72,  143 => 44,  138 => 39,  132 => 36,  126 => 33,  120 => 30,  106 => 19,  102 => 18,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  334 => 236,  328 => 233,  319 => 227,  286 => 197,  275 => 189,  264 => 181,  169 => 89,  158 => 81,  147 => 72,  145 => 44,  138 => 39,  132 => 36,  126 => 33,  120 => 30,  106 => 19,  102 => 18,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -432,7 +434,7 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
 \t\t\t\t\t\t<a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'services' ? 'active' : '' }}\" href=\"#3\" style=\"color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;\">Services</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t<a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'contact' ? 'active' : '' }}\" href=\"#4\" style=\"color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;\">Contact</a>
+\t\t\t\t\t\t<a class=\"nav-link text-uppercase {{ app.request.get('_route') == 'contact' ? 'active' : '' }}\" href=\"{{ path('app_contact') }}\" style=\"color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;\">Contact</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t{# <li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-link text-uppercase \" href=\"{{path('app_contact')}}\" style=\"color: white; margin-right:1em; font-size: 0.8em; margin-left:1em;\">Contact</a>
@@ -603,57 +605,48 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
 
 \t<section id=\"4\" style=\"background-color: #007bff; color: white; margin-top: 5vh;\">
 \t\t<div>
-\t\t\t<!-- FOOTER -->
+\t\t\t
 \t\t\t<footer class=\"w-100 py-4 flex-shrink-0\">
 \t\t\t\t<div class=\"container py-4\">
 \t\t\t\t\t<div class=\"row gy-4 gx-5\">
 \t\t\t\t\t\t<div class=\"col-lg-4 col-md-6\">
-\t\t\t\t\t\t\t<h5 class=\"h1\">Labo.</h5>
-\t\t\t\t\t\t\t<p class=\"small\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+\t\t\t\t\t\t\t<h5 class=\"h4\">LABORATOIRE MÉDICALE
+                             </h5>
+                               <p class=\"small\">Nos équipes de biologistes, techniciens préleveurs et secrétaires médicales sont présents pour vous accompagner tout au long de votre parcours de soins.</p>
+
 \t\t\t\t\t\t\t<p class=\"small mb-0\">&copy; Copyrights. All rights reserved.
-\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Bootstrapious.com</a>
+\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">CDA </a>
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-2 col-md-6\">
 \t\t\t\t\t\t\t<h5 class=\"mb-3\">Quick links</h5>
 \t\t\t\t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Home</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"{{ path('app_logout') }}\">Home</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">About</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Get started</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"{{ path('app_contact') }}\">Contact</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">FAQ</a>
+\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"{{ path('app_logout') }}\">FAQ</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-2 col-md-6\">
-\t\t\t\t\t\t\t<h5 class=\"mb-3\">Quick links</h5>
-\t\t\t\t\t\t\t<ul class=\"list-unstyled\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Home</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">About</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">Get started</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"text-white\" href=\"#\">FAQ</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t<h5 class=\"mb-3\">RECRUTEMENT
+                               </h5>
+\t\t\t\t\t\t\t   <h6>Rejoignez-nous</h6>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t\t\t<h5 class=\"mb-3\">Newsletter</h5>
-\t\t\t\t\t\t\t<p class=\"small\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+\t\t\t\t\t\t\t<p class=\"small\">Abounnez à nous Newsletter</p>
 \t\t\t\t\t\t\t<form action=\"#\">
 \t\t\t\t\t\t\t\t<div class=\"input-group mb-3\">
-\t\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" placeholder=\"Recipient's username\" aria-label=\"Recipient's username\" aria-describedby=\"button-addon2\">
+\t\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" placeholder=\"votre email\" aria-label=\"Recipient's username\" aria-describedby=\"button-addon2\">
 \t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" id=\"button-addon2\" type=\"button\">
 \t\t\t\t\t\t\t\t\t\t<i class=\"fas fa-paper-plane\"></i>
 \t\t\t\t\t\t\t\t\t</button>
@@ -668,6 +661,6 @@ class __TwigTemplate_a37c1e68b6be91a76114acc8f84c49ef extends Template
 
 
 </div>{% endblock %}
-", "home/index.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\templates\\home\\index.html.twig");
     }
 }

@@ -16,12 +16,7 @@ class UserController extends AbstractController
     public function index(UserInterface $user,EntityManagerInterface $entityManager): Response
     {
         // /Assuming there is a ManyToMany relationship between User and Patient
-        $patients = $user->getPatients(); // Replace with the actual method to get associated patients
-
-        $rendezVousList = [];
-        foreach ($patients as $patient) {
-            $rendezVousList = array_merge($rendezVousList, $entityManager->getRepository(RendezVous::class)->findBy(['patient' => $patient]));
-        }
+        $rendezVousList= $entityManager ->getRepository(RendezVous::class)-> findAll();
         return $this->render('user/index.html.twig', [
             'user' => $user,
             'donnees'=>$rendezVousList,

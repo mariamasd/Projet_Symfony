@@ -474,6 +474,6 @@ class __TwigTemplate_3fef9a2022d28320c103e287332f8d9f extends Template
         </a>
     {% endif %}
 {% endmacro %}
-", "@EasyAdmin/menu.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\menu.html.twig");
+", "@EasyAdmin/menu.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\menu.html.twig");
     }
 }

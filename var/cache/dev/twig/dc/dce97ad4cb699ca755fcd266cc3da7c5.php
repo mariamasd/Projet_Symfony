@@ -438,6 +438,6 @@ class __TwigTemplate_a9ca1629b4d7317b4de86557185cdd1c extends Template
 \t\t</div>
 \t</section>
 {% endblock %}
-", "user/index.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\templates\\user\\index.html.twig");
+", "user/index.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\templates\\user\\index.html.twig");
     }
 }

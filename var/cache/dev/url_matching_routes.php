@@ -15,6 +15,7 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/analyses' => [[['_route' => 'app_analyses', '_controller' => 'App\\Controller\\AnalysesController::analyse'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/creneau' => [[['_route' => 'app_creneau', '_controller' => 'App\\Controller\\CreneauController::creneau'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/laborantin' => [[['_route' => 'laborantin', '_controller' => 'App\\Controller\\LaborantinController::index'], null, null, null, false, false, null]],

@@ -308,6 +308,6 @@ class __TwigTemplate_a0af7ad9f117c6c7d09b7b5df7514156 extends Template
 \t\t</table>
 \t</div>
 </div>{% endblock %}
-", "admin/dashboard.html.twig", "C:\\Users\\mariama.saddoudiallo\\OneDrive - Acelys\\Desktop\\ProjetSymfonyCDA\\laboratoire\\templates\\admin\\dashboard.html.twig");
+", "admin/dashboard.html.twig", "C:\\Users\\HP\\Desktop\\CFA\\Projet_Symfony\\templates\\admin\\dashboard.html.twig");
     }
 }

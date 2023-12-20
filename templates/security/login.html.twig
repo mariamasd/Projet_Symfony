@@ -14,7 +14,7 @@
 	
 			.signin {
 				position: relative;
-				height: 700px;
+				height: 600px;
 				width: 500px;
 				margin: auto;
 				box-shadow: 0 30px 125px -5px #000;
@@ -106,16 +106,75 @@
 	{% endblock %}
 	
 	{% block container %}
+	<nav id="nav-1" class="navbar navbar-expand-lg bg-color fixed-top" style="background-color: #007bff;">
+		<div class="container-fluid d-flex justify-content-between align-items-center">
+			<div>
+				<a class="navbar-brand" href="{{path('app_home')}}">
+					<img src="{{ asset('images/logo1.jpg') }}" width="100px">
+				</a>
+			</div>
+			<h1 style="color: white; text-transform: uppercase; font-size: 2em; font-family: 'Kdam Thmor Pro', sans-serif;">Laboratoire médicale</h1>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_home' ? 'active' : '' }}" href="{{path('app_home')}}" style="color: white; margin-right:1em; font-size: 0.8em;">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'a_propos' ? 'active' : '' }}" href="{{path('app_home')}}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">A Propos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'services' ? 'active' : '' }}" href="{{path('app_home')}}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-uppercase " href="{{path('app_contact')}}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Contact</a>
+					</li>
+					{# <li class="nav-item">
+						<a class="nav-link text-uppercase " href="{{path('app_contact')}}" style="color: white; margin-right:1em; font-size: 0.8em; margin-left:1em;">Contact</a></li> #}
+					{# {% if app.user %}
+							<li class="nav-item">
+								<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('app_logout') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Déconnexion</a></li>
+																			{% if app.user %}
+																				{% if is_granted('ROLE_SECRETAIRE') %}
+																		            <li class="nav-item">
+																						<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('secretaire') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																							</li>
+																									{% elseif is_granted('ROLE_PATIENT') %}
+																										<li class="nav-item">
+																											<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('admin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																												</li>
+																											{% elseif is_granted('ROLE_LABORANTIN') %}
+																												<li class="nav-item">
+																												<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_logout' ? 'active' : '' }}" href="{{ path('laborantin') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Dasbord</a>
+																													</li>
+																											{% endif %}
+																											{% endif %}
+																														
+																																			{% else %}
+																																				<li class="nav-item">
+																														<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_login' ? 'active' : '' }}" href="{{ path('app_login') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Se connecter</a>
+																																				</li>
+																																				<li class="nav-item">
+																																					<a class="nav-link text-uppercase {{ app.request.get('_route') == 'app_register' ? 'active' : '' }}" href="{{ path('app_register') }}" style="color: white; margin-right:1em; margin-left:1em; font-size: 0.8em;">Inscription</a>
+																																				</li>
+																																			{% endif %} #}
+				</ul>
+			</div>
+		</div>
+	</nav>
 		<div class="signin">
 			<div class="back-img">
 				<div class="sign-in-text">
 					<h2 class="active">
-						<a href="{{path('app_login')}}">Sign In
+						<a  class="btn btn-success" href="{{path('app_login')}}">Se connecter
 						</a>
 					</h2>
 					<h2 class="nonactive">
-						<a href="{{path('app_register')}}">
-							Sign Up
+						<a  class="btn btn-danger" href="{{path('app_register')}}">
+							Creer votre compte
 						</a>
 					</h2>
 				</div>
@@ -128,27 +187,82 @@
 					<!-- Email -->
 					<div class="form-group">
 						<label class="form-control-label">Email</label>
-						<input class="form-control" type="email" name="email" id="inputEmail" placeholder="Your email" required autofocus>
+						<input class="form-control" type="email" name="email" id="inputEmail" placeholder="Votre mail" required autofocus>
 					</div>
 	
 					<!-- Password -->
 					<div class="form-group">
-						<label class="form-control-label">Password</label>
-						<input class="form-control" type="password" name="password" id="inputPassword" placeholder="Your password" required>
+						<label class="form-control-label">mot de pass</label>
+						<input class="form-control" type="password" name="password" id="inputPassword" placeholder="Votre mot de pass" required>
 					</div>
 	
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 	
-					<p class="forgot-text">Forgot Password?</p>
+					
 					<!-- Checkbox -->
 					<label class="form-check-label">
 						<input class="form-check-input" type="checkbox" name="remember_me" checked>
 						<span class="keep-text">Keep me Signed In</span>
 					</label>
 					<div class="d-grid gap-2">
-						<button type="submit" class="btn btn-primary">S'inscrire</button>
+						<button type="submit" class="btn btn-primary">Se connecter</button>
 					</div>
 				</form>
 			</div>
 		</div>
+		<section id="4" style="background-color: #007bff; color: white; margin-top: 5vh;">
+		<div>
+			
+			<footer class="w-100 py-4 flex-shrink-0">
+				<div class="container py-4">
+					<div class="row gy-4 gx-5">
+						<div class="col-lg-4 col-md-6">
+							<h5 class="h4">LABORATOIRE MÉDICALE
+                             </h5>
+                               <p class="small">Nos équipes de biologistes, techniciens préleveurs et secrétaires médicales sont présents pour vous accompagner tout au long de votre parcours de soins.</p>
+
+							<p class="small mb-0">&copy; Copyrights. All rights reserved.
+								<a class="text-white" href="#">CDA </a>
+							</p>
+						</div>
+						<div class="col-lg-2 col-md-6">
+							<h5 class="mb-3">Quick links</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a class="text-white" href="{{ path('app_logout') }}">Home</a>
+								</li>
+								<li>
+									<a class="text-white" href="#">About</a>
+								</li>
+								<li>
+									<a class="text-white" href="{{ path('app_contact') }}">Contact</a>
+								</li>
+								<li>
+									<a class="text-white" href="{{ path('app_logout') }}">FAQ</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-2 col-md-6">
+							<h5 class="mb-3">RECRUTEMENT
+                               </h5>
+							   <h6>Rejoignez-nous</h6>
+							
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<h5 class="mb-3">Newsletter</h5>
+							<p class="small">Abounnez à nous Newsletter</p>
+							<form action="#">
+								<div class="input-group mb-3">
+									<input class="form-control" type="text" placeholder="votre email" aria-label="Recipient's username" aria-describedby="button-addon2">
+									<button class="btn btn-primary" id="button-addon2" type="button">
+										<i class="fas fa-paper-plane"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</section>
 	{% endblock %}
