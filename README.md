@@ -20,10 +20,10 @@ Ce projet utilise le **framework Symfony** pour créer une application de prise 
 
 ---
 ### Technologies utilisées
-Backend : Symfony (Framework PHP)
-Frontend : HTML, CSS, JavaScript, avec l'intégration d'un design responsive
-Base de données : MySQL ou MariaDB pour la gestion des données (utilisé par Symfony via Doctrine)
-Serveur Web : Apache ou Nginx (selon votre configuration)
+- **Backend** : Symfony (Framework PHP)
+-**Frontend** : symfony twig
+- **Base de données** : MySQL pour la gestion des données (utilisé par Symfony via Doctrine)
+- **Serveur Web** : Apache
 Environnement de développement : Docker pour la gestion des conteneurs et des services (MySQL, PHP, Apache, etc.)
 
 ---
